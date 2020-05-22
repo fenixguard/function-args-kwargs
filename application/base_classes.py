@@ -31,7 +31,7 @@ class PhoneBook:
         print(f"Вы создали телефонную книгу под именем {self.name_book}")
         print("-" * 25)
 
-    def get_all(self):
+    def show_all(self):
         if self.contacts:
             print(f"Телефонная книга '{self.name_book}' содержит {len(self.contacts)} контактов")
             print("-" * 25)
@@ -61,7 +61,7 @@ class PhoneBook:
         print(f"Контакт с номером {phone_number} отсутствует в телефонной книге")
         print("-" * 25)
 
-    def get_all_favorite(self):
+    def show_all_favorite(self):
         favorite_contacts = [contact for contact in self.contacts if contact.favorite_contact]
         if not favorite_contacts:
             print("В телефонной книге нет избранных контактов")
